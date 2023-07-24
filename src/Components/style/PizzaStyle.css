@@ -1,0 +1,40 @@
+.Pitsa__h1{
+    margin-left: 128px;
+    margin-top: -255px;
+    font-family: 'Aileronheavy';
+}
+
+@font-face {
+    font-family: 'Aileronultralightitalic';
+    src: url(../fonts/Aileronultralightitalic.ttf);
+}
+
+@font-face {
+    font-family: 'Aileronheavy';
+    src: url(../fonts/Aileronheavy.ttf);
+}
+
+.card__1{
+    margin-left: 128px;
+    margin-top: 30px;
+    width: 540px;
+    height: 230px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(151, 151, 151, 0.18);
+}
+
+.card__2{
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 540px;
+    height: 230px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(151, 151, 151, 0.18);
+}
+
+.card__11{
+    margin-bottom: 173px;
+}
+

@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import {Routes,Route} from "react-router-dom";
+import Home from "./pages/Home";
+import Pitsa from "./pages/Pitsa";
+import Burger from "./pages/Burger";
+import Kombo from "./pages/Kombo";
+import Ichimliklar from "./pages/Ichimliklar";
+import Eror404 from "./pages/Eror404";
+import "./Components/style/main.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+    render() {
+
+        return (
+            <>
+                <Routes>
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/Pitsa" element={<Pitsa/>}/>
+                    <Route path="/Burger" element={<Burger/>}/>
+                    <Route path="/Kombo" element={<Kombo/>}/>
+                    <Route path="/Ichimliklar" element={<Ichimliklar/>}/>
+                    <Route path="*" element={<Eror404/>}/>
+                </Routes>
+
+
+
+            </>
+        );
+    }
 }
 
 export default App;
