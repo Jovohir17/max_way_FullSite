@@ -7,6 +7,7 @@ import Kombo from "./pages/Kombo";
 import Ichimliklar from "./pages/Ichimliklar";
 import Eror404 from "./pages/Eror404";
 import "./Components/style/main.css"
+import Basket from "./pages/Basket";
 
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
                     <Route path="/Burger" element={<Burger/>}/>
                     <Route path="/Kombo" element={<Kombo/>}/>
                     <Route path="/Ichimliklar" element={<Ichimliklar/>}/>
+                    <Route path="/Basket" element={<Basket/>}/>
                     <Route path="*" element={<Eror404/>}/>
                 </Routes>
 

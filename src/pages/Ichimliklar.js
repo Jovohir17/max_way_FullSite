@@ -2,6 +2,15 @@ import React, {Component} from 'react';
 import {StyledCard} from "../Components/CardStyle/Card Style";
 
 class Ichimliklar extends Component {
+
+    handleAddToCart = (name, price, imageSrc) => {
+        const item = {name, price, imageSrc};
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        cartItems.push(item);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    };
+
     render() {
         return (
             <>
@@ -29,7 +38,9 @@ class Ichimliklar extends Component {
                                         </p>
                                         <div className="narx__df">
                                             <h3 className="pizza_narx">6,000 UZS</h3>
-                                            <button className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
+                                            <button
+                                                onClick={() => this.handleAddToCart('Sprite 1L', 6000, './imgs/sprite.svg')}
+                                                className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
 
                                         </div>
 
@@ -59,7 +70,9 @@ class Ichimliklar extends Component {
                                         </p>
                                         <div className="narx__df">
                                             <h3 className="pizza_narx">9,000 UZS</h3>
-                                            <button className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
+                                            <button
+                                                onClick={() => this.handleAddToCart('Coca cola 1,5L', 9000, './imgs/cola.svg')}
+                                                className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
 
                                         </div>
 
@@ -88,7 +101,9 @@ class Ichimliklar extends Component {
                                         </p>
                                         <div className="narx__df">
                                             <h3 className="pizza_narx">6,000 UZS</h3>
-                                            <button className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
+                                            <button
+                                                onClick={() => this.handleAddToCart('Fanta 1L', 6000, './imgs/fanta.svg')}
+                                                className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
 
                                         </div>
 

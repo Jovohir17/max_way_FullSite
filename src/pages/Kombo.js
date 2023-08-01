@@ -2,6 +2,15 @@ import React, {Component} from 'react';
 import {StyledCard} from "../Components/CardStyle/Card Style";
 
 class Kombo extends Component {
+
+    handleAddToCart = (name, price, imageSrc) => {
+        const item = {name, price, imageSrc};
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        cartItems.push(item);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    };
+
     render() {
         return (
             <>
@@ -29,7 +38,9 @@ class Kombo extends Component {
                                         </p>
                                         <div className="narx__df">
                                             <h3 className="pizza_narx">25,000 UZS</h3>
-                                            <button className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
+                                            <button
+                                                onClick={() => this.handleAddToCart('Kombo-1', 25000, './imgs/Kombo__max.png')}
+                                                className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
 
                                         </div>
 
@@ -59,7 +70,9 @@ class Kombo extends Component {
                                         </p>
                                         <div className="narx__df">
                                             <h3 className="pizza_narx">23,000 UZS</h3>
-                                            <button className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
+                                            <button
+                                                onClick={() => this.handleAddToCart('Kombo-2', 23000, './imgs/burger__combo.png')}
+                                                className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
 
                                         </div>
 
@@ -88,7 +101,9 @@ class Kombo extends Component {
                                         </p>
                                         <div className="narx__df">
                                             <h3 className="pizza_narx">30,000 UZS</h3>
-                                            <button className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
+                                            <button
+                                                onClick={() => this.handleAddToCart('Kombo-3', 30000, './imgs/kombo__max.png')}
+                                                className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
 
                                         </div>
 

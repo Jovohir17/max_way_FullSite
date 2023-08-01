@@ -2,7 +2,17 @@ import React, {Component} from 'react';
 import {StyledCard} from "../Components/CardStyle/Card Style";
 
 class Burger extends Component {
+
+    handleAddToCart = (name, price, imageSrc) => {
+        const item = {name, price, imageSrc};
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        cartItems.push(item);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    };
+
     render() {
+
         return (
             <>
                 <div className="card__pizza">
@@ -25,7 +35,9 @@ class Burger extends Component {
                                         </p>
                                         <div className="narx__df">
                                             <h3 className="pizza_narx">23,000 UZS</h3>
-                                            <button className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
+                                            <button
+                                                onClick={() => this.handleAddToCart('Cheeseburger', 23000, './imgs/Burger1.png')}
+                                                className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
 
                                         </div>
 
@@ -53,7 +65,9 @@ class Burger extends Component {
                                         </p>
                                         <div className="narx__df">
                                             <h3 className="pizza_narx">23,000 UZS</h3>
-                                            <button className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
+                                            <button
+                                                onClick={() => this.handleAddToCart('Chili burger', 23000, './imgs/Burger1.png')}
+                                                className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
 
                                         </div>
 
@@ -82,7 +96,9 @@ class Burger extends Component {
                                         </p>
                                         <div className="narx__df">
                                             <h3 className="pizza_narx">23,000 UZS</h3>
-                                            <button className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
+                                            <button
+                                                onClick={() => this.handleAddToCart('Hamburger', 23000, './imgs/Burger1.png')}
+                                                className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
 
                                         </div>
 
@@ -112,7 +128,9 @@ class Burger extends Component {
                                         </p>
                                         <div className="narx__df">
                                             <h3 className="pizza_narx">23,000 UZS</h3>
-                                            <button className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
+                                            <button
+                                                onClick={() => this.handleAddToCart('Double burger', 23000, './imgs/Burger1.png')}
+                                                className="plus__button"><img className="img__plus" src="./imgs/plus.svg" alt="plus"/></button>
 
                                         </div>
 

@@ -23,6 +23,7 @@ const ObjectFilter = () => {
 
     return (
         <>
+            <main>
             <button className="Filtr"><img className="filter-img" src="./imgs/Group.svg" alt="dd"/> Filtr</button>
 
             <div className="filter-container">
@@ -70,6 +71,7 @@ const ObjectFilter = () => {
                     <img className="path" src="./imgs/Path.png" alt=""/>
                     <img className="path__full" src="./imgs/Path__Full.png" alt=""/>
             </div>
+            </main>
         </>
     );
 };

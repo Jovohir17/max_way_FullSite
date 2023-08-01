@@ -95,3 +95,7 @@ button{
 .none{
     display: flex;
 }
+
+.btn-success{
+    margin-right: 20px;
+}
