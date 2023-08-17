@@ -64,7 +64,7 @@ const ObjectFilter = () => {
                 </div>
 
                 <div className="image-container">
-                    <img data-aos="fade-left" data-aos-duration="2000" className="phone" src="./imgs/White.png" alt=""/>
+                    <img className="phone" src="./imgs/White.png" alt=""/>
                 </div>
 
 
